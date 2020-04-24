@@ -1,0 +1,29 @@
+﻿@model IEnumerable<FeedbackProject.Models.Teacher>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Teachers</h2>
+@if (!Model.Any())
+{
+    <p>We don't have any teachers yet.</p>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Teacher</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var teacher in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(teacher.Name, "Details", "Teachers", new { id = teacher.Id }, null)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+

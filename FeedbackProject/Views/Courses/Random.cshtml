@@ -1,0 +1,24 @@
+﻿@model FeedbackProject.ViewModels.RandomCourseViewModel
+@{
+
+    ViewBag.Tile = "Random";
+
+}
+
+<h2>@Model.Course.CourseName</h2>
+
+@if (Model.Teachers.Count == 0)
+{
+    <text>No one teaches has teached this Course before</text>
+}
+
+else
+{
+    <ul>
+        @foreach (var teacher in Model.Teachers)
+        {
+            <li>@teacher.Name</li>
+        }
+
+    </ul>
+}

@@ -1,0 +1,24 @@
+﻿@model IEnumerable<FeedbackProject.Models.Course>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Courses</h2>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Course</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var course in Model)
+        {
+            <tr>
+                <td>@course.CourseName</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
