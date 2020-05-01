@@ -5,20 +5,22 @@
 
 }
 
-<h2>@Model.Course.CourseName</h2>
+@*<h2>@Model.Course.CourseName</h2>*@
 
-@if (Model.Teachers.Count == 0)
+@if (Model.Feedback.Count == 0)
 {
-    <text>No one teaches has teached this Course before</text>
+    <text>No one has reviewed this Course before!</text>
 }
 
 else
 {
-    <ul>
-        @foreach (var teacher in Model.Teachers)
-        {
-            <li>@teacher.Name</li>
-        }
+<ul>
+    @foreach (var feedBack in Model.Feedback)
+    {
+        <li>@feedBack.FeedbackWriterName</li>
+        <li>@feedBack.FeedbackWriterEmail</li>
+        <li>@feedBack.Feedback</li>
+    }
 
-    </ul>
+</ul>
 }

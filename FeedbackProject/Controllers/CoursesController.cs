@@ -19,11 +19,7 @@ namespace FeedbackProject.Controllers
 
         private IEnumerable<Course> GetCourses()
         {
-            return new List<Course>
-            {
-                new Course { Id = 1, CourseName = "Java" },
-                new Course { Id = 2, CourseName = "PHP" }
-            };
+            return new List<Course>();
         }
 
 
@@ -31,18 +27,9 @@ namespace FeedbackProject.Controllers
         // GET: Courses/Random
         public IActionResult Random()
         {
-            var course = new Course() { CourseName = "Java" };
-            var teachers = new List<Teacher>
-            {
-            new Teacher { Name = "Alina"},
-            new Teacher { Name = "Bogdan"}
-            };
 
-            var viewModel = new RandomCourseViewModel
-            {
-                Course = course,
-                Teachers = teachers
-            };
+            var viewModel = new RandomCourseViewModel();
+           
 
             return View(viewModel);
         }
