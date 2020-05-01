@@ -28,8 +28,8 @@ namespace FeedbackProject.Controllers
         {
             return new List<Teacher>
             {
-                new Teacher { Id = 1, Name = "Cristi" },
-                new Teacher { Id = 2, Name = "Daniela" }
+                 new Teacher {Id=1, FirstName = "Alina", LastName="Alinu"},
+            new Teacher {Id=2, FirstName = "Bogdan", LastName="Bogdana"}
             };
         }
     }
